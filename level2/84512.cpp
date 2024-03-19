@@ -15,9 +15,10 @@ void make_weight()
 {
     for (int i = 0; i < 5; i++)
     {
-        vec_weight.emplace_back(0);
+        int temp = 0;
         for (int j = 4 - i; j >= 0; j--)
-            vec_weight.back() += pow(5, j);
+            temp += pow(5, j);
+        vec_weight.emplace_back(temp);
     }
 }
 
